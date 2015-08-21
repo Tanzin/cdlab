@@ -1,0 +1,1 @@
+1: write a program to design lexical analiser of compiler.
