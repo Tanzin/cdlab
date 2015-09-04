@@ -7,6 +7,7 @@ int main()
 	int counter = 0;
 	int countkey = 0;
 	int counterif = 0;
+	int counterelse = 0;
 	char c;
 	locale loc;
 	string key;
@@ -33,9 +34,16 @@ int main()
 	cout<<"the number of opertors is : "<<counter<<endl;
 	for(int j = 0; j < size ; j++ )
 	{
-		if( store[i] == 'i' && store[i+1] == 'f' && !isalpha(store[i+2],loc))
+		if( store[j] == 'i' && store[j+1] == 'f' && !isalpha(store[j+2],loc))
 			counterif++;
 	}
+
+	for(int j = 0; j < size ; j++ )
+        {
+                if( store[j] == 'e' && store[j+1] == 'l' && store[j+2] == 's' && store[j+3] == 'e' /*!isalpha(store[i+2],loc)*/)
+                        counterelse++;
+        }
+	cout<<"else : "<<counterelse<<endl;	
 	cout<<"if : "<<counterif<<endl;
         ip.close();
 	return 0;
