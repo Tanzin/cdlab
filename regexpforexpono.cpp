@@ -16,14 +16,21 @@ int main()
 	//	cout<<input[i];
 	//cout<<endl;
 	int noerflag = 1;
+	int eloc = 1000; //location of e
 	int eflag1 = 0;//decimal is two times
 	int eflag2 = 0;//numeric value expected after ...
 	int eflag3 = 0;//sign is applied more than one time..
 	//finding errors in exponential number ...
 	int dotcounter = 0;
+	int aftereflag = 0;
 	int buff = 10; // buffer to store the digit present just before error..
 	for(int i = 0; i < len ; i++ )
 	{
+		if(input[i] == 'e')//this condition turns on the flag when we are scanning beyond e....
+		{
+			eloc = i;
+			aftereflag = 1;
+		}
 		//sign error check section..............
 		if( i == 0 )
 		{
