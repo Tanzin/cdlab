@@ -1,0 +1,17 @@
+#include<iostream.h>
+
+viod main(){
+
+int a,b,c=10;
+
+cout<<a;
+
+cout<<b;
+
+float flt=10.20;
+
+float flt1=10.20;
+
+cout<<flt;
+
+
