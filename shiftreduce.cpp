@@ -16,23 +16,44 @@ int main()
 	cout<<ipBuff<<endl;
 	cout<<"size of input string :"<<size<<endl;
 	int i = 0;
+	cout<<"Stack"<<"\t\t\t\tipbuff"<<"\t\t\t\taction"<<endl;
+	cout<<"____________________________________________________________________________________________"<<endl;
 	while(i < size)
 	{
 		if(ipBuff[i] == 'd')
+		{
 			stack += 'E';
+			for(int a = 0 ; a < stack.length()-1;a++)cout<<stack[a];cout<<"d";cout<<"\t\t\t\t";for(int a = i+1; a< size; a++ )cout<<ipBuff[a];cout<<"\t\t\t\tshift"<<endl;
+			cout<<stack;cout<<"\t\t\t\t";for(int a = i+1; a< size; a++ )cout<<ipBuff[a];cout<<"\t\t\t\tReduced"<<endl;
+		}
 		else
+		{
 			stack += ipBuff[i];
+			cout<<stack;cout<<"\t\t\t\t";for(int a = i+1; a< size; a++ )cout<<ipBuff[a];cout<<"\t\t\t\tshift"<<endl;
+		}
 		if(stack == "E+E")
+		{
+		//	cout<<stack;cout<<"\t\t\t\t";for(int a = i+1; a< size; a++ )cout<<ipBuff[a];cout<<"\t\t\t\tshift"<<endl;
 			stackCase = 1;
+		}
 		else if(stack == "E*E")
+		{
+		//	cout<<stack;cout<<"\t\t\t\t";for(int a = i+1; a< size; a++ )cout<<ipBuff[a];cout<<"\t\t\t\tshift"<<endl;
 			stackCase = 2;
+		}
+		//printing the table section........................
+		
 		switch(stackCase)
 		{
 			case 1:
 				stack = 'E';
+
+				cout<<stack;cout<<"\t\t\t\t";for(int a = i+1; a< size; a++ )cout<<ipBuff[a];cout<<"\t\t\t\tReduced"<<endl;
 				break ;
 			case 2:
 				stack = 'E';
+				cout<<stack;cout<<"\t\t\t\t";for(int a = i+1; a< size; a++ )cout<<ipBuff[a];cout<<"\t\t\t\tReduced"<<endl;
+				break;
 		}
 		i++;
 	}
