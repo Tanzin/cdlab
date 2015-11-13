@@ -1,0 +1,8 @@
+if ( a < b )
+{	a1 = 2 + qwerty ; }
+else
+	j = 10 ;
+deshu()
+{
+	helo = 13534 ;
+}

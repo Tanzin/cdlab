@@ -1,4 +1,4 @@
-#include<iostrea m>
+#include<iostream>
 #include<fstream>
 
 using namespace std;
